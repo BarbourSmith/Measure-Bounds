@@ -6,9 +6,48 @@
             "x": 0,
             "y": 0,
             "uniqueID": 532378,
-            "ioValues": [],
+            "ioValues": [
+                {
+                    "name": "Shape",
+                    "ioValue": 10
+                }
+            ],
             "topLevel": true,
             "allAtoms": [
+                {
+                    "atomType": "Input",
+                    "name": "Shape",
+                    "x": 0.017569546120058566,
+                    "y": 0.4904214559386973,
+                    "uniqueID": 760649,
+                    "ioValues": []
+                },
+                {
+                    "atomType": "Code",
+                    "name": "Code",
+                    "x": 0.3448023426061494,
+                    "y": 0.4559386973180076,
+                    "uniqueID": 981381,
+                    "ioValues": [],
+                    "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Input1){\n  console.log(Input1.boundingBox());\n  return Sphere(40)        //return must be geometry;\n}\n\nreturn main(Input1)"
+                },
+                {
+                    "atomType": "Rectangle",
+                    "name": "Rectangle",
+                    "x": 0.15739385065885797,
+                    "y": 0.7164750957854406,
+                    "uniqueID": 704518,
+                    "ioValues": [
+                        {
+                            "name": "x length",
+                            "ioValue": 10
+                        },
+                        {
+                            "name": "y length",
+                            "ioValue": 10
+                        }
+                    ]
+                },
                 {
                     "atomType": "Output",
                     "name": "Output",
@@ -17,7 +56,15 @@
                     "ioValues": []
                 }
             ],
-            "allConnectors": [],
+            "allConnectors": [
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "Input1",
+                    "ap2Primary": false,
+                    "ap1ID": 704518,
+                    "ap2ID": 981381
+                }
+            ],
             "fileTypeVersion": 1
         }
     ],
