@@ -25,28 +25,16 @@
                 {
                     "atomType": "Code",
                     "name": "Code",
-                    "x": 0.3448023426061494,
-                    "y": 0.4559386973180076,
+                    "x": 0.3594436310395315,
+                    "y": 0.43295019157088127,
                     "uniqueID": 981381,
-                    "ioValues": [],
-                    "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Input1){\n  console.log(Input1.boundingBox());\n  return Sphere(40)        //return must be geometry;\n}\n\nreturn main(Input1)"
-                },
-                {
-                    "atomType": "Rectangle",
-                    "name": "Rectangle",
-                    "x": 0.15739385065885797,
-                    "y": 0.7164750957854406,
-                    "uniqueID": 704518,
                     "ioValues": [
                         {
-                            "name": "x length",
-                            "ioValue": 10
-                        },
-                        {
-                            "name": "y length",
+                            "name": "Input1",
                             "ioValue": 10
                         }
-                    ]
+                    ],
+                    "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Input1){\n  const bounds = Input1.measureBoundingBox();\n  console.log(\"X: \" + (bounds[1][0]-bounds[0][0]));\n  console.log(\"Y: \" + (bounds[1][1]-bounds[0][1]));\n  console.log(\"Z: \" + (bounds[1][2]-bounds[0][2]));\n  return Sphere(40)        //return must be geometry;\n}\n\nreturn main(Input1)"
                 },
                 {
                     "atomType": "Output",
@@ -58,11 +46,17 @@
             ],
             "allConnectors": [
                 {
-                    "ap1Name": "geometry",
+                    "ap1Name": "number or geometry",
                     "ap2Name": "Input1",
                     "ap2Primary": false,
-                    "ap1ID": 704518,
+                    "ap1ID": 760649,
                     "ap2ID": 981381
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "number or geometry",
+                    "ap2Primary": false,
+                    "ap1ID": 981381
                 }
             ],
             "fileTypeVersion": 1
